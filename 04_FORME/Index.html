@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forme</title>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Osnovni podaci</legend>
+            <p>
+                <label for="">Ime:</label>
+                <input type="text" maxlength="15" minlength="5" value="Aleksandar"> 
+            </p>
+            <p>
+            <label for="text">Prezime:</label>
+            <input type="text" placeholder="Unesite svoje prezime">
+            </p>
+            <p>
+                <label for="">Godine:</label>
+                <input type="number" min="18" max="140" step="1">
+            </p>
+            <p>
+                <label for="email">E-mail:</label>
+                <input type="email" name="" id="email">
+            </p>
+            <p>
+                <label for="pasword">Lozinka:</label>
+                <input type="password" name="" id="pasword">
+            </p>
+           
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Ostali podaci</legend>
+                <!-- za svaku grupu poseban name 
+                da se nebi menjalo
+                checked
+             -->
+            <p>
+                <label for="">Odaberite pol:</label>
+                <input type="radio" name="pol" id="" value="z">Zenski
+                <input type="radio" name="pol" id="" value="m">Muski
+                <input type="radio" name="pol" id="" value="d" checked>Drugo
+            </p>
+            <!-- value za validaciju JavaScript-a 
+                
+            -->
+            <p>
+                <label for="">Odaberite kurs:</label>
+                <input type="radio" name="kurs" id="" value="js">JS
+                <input type="radio" name="kurs" id="" value="php">PHP
+                <input type="radio" name="kurs" id="" value="qa">QA
+            </p>
+
+            <p>
+                <label for="">Odaberite programske jezike koje zelite da naucite:</label>
+                <br>
+                <input type="checkbox" name="jezik" id="" value="js">JS
+                <input type="checkbox" name="jezik" id="" value="php">PHP
+                <input type="checkbox" name="jezik" id="" value="c++">C++
+                <input type="checkbox" name="jezik" id="" value="java">Java
+                <input type="checkbox" name="jezik" id="" value="python">Python
+            </p>
+            <p>
+                <label for="">Obrazovanje:</label>
+                <select name="obrazovanje" id="">
+                    <option value="os">Osnovna skiola</option>
+                    <option value="ss">Srednja skola</option>
+                    <!-- <option value="f">Fakultet</option> -->
+                    <optgroup label="Fakultet">
+                        <option value="oas">OAS</option>
+                        <option value="mas">MAS</option>
+                        <option value="das">DAS</option>
+                    </optgroup>
+                    
+                </select>
+            </p>
+            
+        </fieldset>
+        <p>
+            <input type="submit" value="Posalji">
+            <input type="reset" value="Resetuj">
+            <button>Klikni</button>
+            <!-- input se koristi za slanje, a button za prikazivanje nekih stvari -->
+        </p>
+    </form>
+</body>
+</html>
