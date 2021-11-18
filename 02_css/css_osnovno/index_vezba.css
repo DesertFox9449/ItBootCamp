@@ -1,0 +1,49 @@
+body {
+    background-color: #E4A030;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+h1 {
+    color: maroon;
+}
+h2 {
+    color: red;
+}
+p {
+    color: purple;
+}
+img {
+    width: 400px;
+    height: 300px;
+    border: 2px dashed red;
+}
+a {
+    /*  */
+    color:orange;
+
+}
+a:visited {
+    color: green;
+}
+a:hover {
+    color: yellow;
+}
+a:active
+{
+    color: green;
+}
+
+
+.center {
+    text-align: center;
+}
+.right {
+    text-align: right;
+    font-size: 24px;
+    
+}
+#novi {
+    text-align: center;
+    color: green;
+    font-family: Comic Sans;
+}

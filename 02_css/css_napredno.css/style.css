@@ -1,0 +1,43 @@
+.crveni_paragraf {
+    color: red;
+}
+.desno_poravnanje {
+    text-align: right;
+}
+
+li {
+    color:green;
+}
+
+.kurs {
+    color: blue;
+}
+#js {
+    color: red;
+}
+/* Selektovati sve pragrafe unutar div elementa */
+
+div p {
+    text-decoration: underline;
+}
+div .podparagraf {
+    font-weight: bold;
+}
+
+/* Direktni potomak > */
+
+#divizija>p {
+    font-style: oblique;
+}
+/* Svaki treci je 3n */
+ol li:nth-child(3n) {
+    color: red;
+}
+/* Svaki treci je 3n */
+ol li:nth-child(3) {
+    font-style: italic;
+}
+
+ol li:nth-child(odd) {
+    background-color: greenyellow;
+}
