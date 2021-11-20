@@ -1,0 +1,30 @@
+#span1 {
+    border: 1px black solid;
+    width: 120px;
+    height: 40px;
+    /* margin-right: 20px; */
+    margin: 0px;
+    padding-left: 10px;
+    text-align: left;
+    padding-right: 70px;
+    background-color: burlywood;
+    display: inline-block;
+    padding-top: 20px;
+    padding-bottom: 0px;
+​
+}
+#span2 {
+    border: 1px black solid;
+    width: 120px;
+    height: 40px;
+    margin-right: 20px;
+    padding-left: 10px;
+    text-align: left;
+    padding-right: 70px;
+    background-color: grey;
+    display: inline-block;
+    padding-top: 20px;
+    padding-bottom: 0px;
+}
+/* display: block;  mozes da menjas width i height za blokovske elemente */
+/* display: inline; za span */
