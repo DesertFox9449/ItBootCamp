@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+header {
+    background-color: violet;
+    position: fixed;
+    top: 0;
+}
+
+section {
+    position: relative;
+    top: 35px;
+    left: 50px;
+    /* z-index: -2; */
+    /* utice na link, nije klikljiv */
+
+    background-color: aqua;
+
+    /* width: 100%; */
+    /* 
+    kad se menja pozicija
+    element se ne ponasa kao block element, vec kao 
+    in-line block 
+    zbog toga se radi   width: 100%;
+    */
+
+    margin: 10px;
+    width: 400px;
+    height: 400px;
+}    
+section img {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50px;
+    left: 20px;
+}
+section p {
+    position: absolute;
+    top: 250px;
+    left: 50px;
+    }
+section a {
+    position: absolute;
+    top: 300px;
+    left: 90px;
+    
+}

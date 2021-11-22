@@ -1,0 +1,69 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+
+}
+/*  
+ #parent {
+    background-color: brown;
+    position: relative;
+    /* 
+    kad se menja pozicija,
+    menja se i visina
+    u ovom slucaju
+    posto su elementi izuzeti iz diva poz absolute
+    div je prazan
+    pa mu treba dodati 
+    visinu i duzinu 
+    */
+    /* 
+    width: 100%;
+    height: 18.5px;
+}
+*/
+/* #parent p {
+    background-color: burlywood;
+    width: 25%;
+    position: absolute;
+    
+}
+
+#parent p:nth-child(1) {
+    left: 0;
+}
+
+#parent p:nth-child(2) {
+    left: 25%;
+}
+
+#parent p:nth-child(3) {
+    left: 50%;
+}  */
+
+
+/* 
+    Kada se korisit float:
+        1) Deca koja se redjaju:
+        float: (left ili right)
+        2) Roditelji unutar kojeg se redjaju:
+        overflow: hidden
+*/
+
+
+#parent {
+    background-color: brown;
+    
+    overflow: hidden;
+}
+#parent p {
+    background-color: burlywood;
+    float: right;
+    width: 25%;
+    /* Float radi za block elemente
+    i inline elemente
+    */
+    
+}
+#parent p:first-child {
+    float: left;
+}

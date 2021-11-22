@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+nav {
+    background-color: red;
+    position: fixed;
+    width: 100%;
+    
+}
+
+ul li {
+
+    float: left;
+    width: 25%;
+    background-color: #000;
+    list-style-type: none;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    border: 1px solid #fff;
+    
+}
+
+#active {
+    background-color: red;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+}
+#sc {
+    position: relative;
+
+}
+#pad {
+    display: none;
+    position: absolute;
+    width: 100%;
+    
+}
+#pad li{
+    display: block;
+    width: inherit;
+}
+#sc:hover #pad {
+    display: block;
+    
+
+}

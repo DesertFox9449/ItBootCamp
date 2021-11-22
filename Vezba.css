@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+header {
+    margin-top: 10px;
+}
+#centar {
+    background-image: url(pizza3.jpg);
+    background-repeat: none;
+    background-size: cover;
+    background-position:center;
+    height: 300px;
+    position: relative;
+}
+
+#centar div p {
+    
+    position: absolute;
+    background-color:brown;
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+#gornjiLevi {
+    background-image: url(pizza3.jpg);
+    background-repeat: none;
+    background-size: cover;
+    background-position:top left;
+    height: 300px;
+    position: relative;
+}
+
+#gornjiLevi div p {
+    position: absolute;
+    background-color:brown;
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+    top: -50;
+    left: 0;
+
+}
+
+#gornjiDesni {
+    background-image: url(pizza3.jpg);
+    background-repeat: none;
+    background-size: cover;
+    background-position: center right;
+    height: 300px;
+    position: relative;
+}
+
+#gornjiDesni div p {
+    position: absolute;
+    background-color:brown;
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+    top: 0;
+    right: 0;
+}
+#donjiDesni {
+    background-image: url(pizza3.jpg);
+    background-repeat: none;
+    background-size: cover;
+    background-position: bottom;
+    height: 300px;
+    position: relative;
+
+}
+#donjiDesni div p{
+    position: absolute;
+    background-color:brown;
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+    bottom: 0;
+    right: 0;
+}
+#donjiLevi {
+    background-image: url(pizza3.jpg);
+    background-repeat: none;
+    background-size: cover;
+    
+    height: 300px;
+    position: relative;
+}
+
+#donjiLevi div p{
+    position: absolute;
+    background-color:brown;
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+    bottom: 0;
+    left: 0;
+}
