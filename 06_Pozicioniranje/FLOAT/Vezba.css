@@ -22,6 +22,7 @@ ul li {
     color: #fff;
     text-align: center;
     border: 1px solid #fff;
+    height: 50px;
     
 }
 
@@ -33,8 +34,13 @@ nav ul li a{
     text-decoration: none;
     color: inherit;
     display: block;
-    width: 100%;
+    /* width: 100%; */
+    line-height: 50px;
 }
+li a:hover:not(#active a){
+    background-color: gray;
+    color:red;
+} 
 #sc {
     position: relative;
 
