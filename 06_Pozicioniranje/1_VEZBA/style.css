@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#one {
+    width: 200px;
+    border: 1px solid #000;
+    margin: auto;
+    
+
+}
+#two {
+    overflow-x: hidden;
+}
+img {
+    width: 200px;
+    height: 200px;
+    border: 3px dotted red;
+    border-radius: 50%;
+}
+span {
+    font-size: 1.2;
+    color: brown;
+}
+p {
+    height: 150px;
+}

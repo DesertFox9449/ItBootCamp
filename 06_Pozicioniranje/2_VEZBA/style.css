@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+aside {
+    width: 60%;
+    margin: auto;
+    /* outline: 2px solid red; */
+    background-color:mediumturquoise;
+}
+aside div:first-child a {
+    text-decoration: none;
+    text-align: center;
+    background-color: mediumspringgreen;
+    display: block;
+    color: #fff;
+    font-size: 1.5em;
+    padding: 20px;
+    
+}
+
+input, textarea {
+    display: block;
+    width: 100%;
+    margin: 20px 0px;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    
+}
+form {
+    width: 99%;
+    margin: auto;
+}
+
+input[type="submit"] {
+    font-size: 1.5em;
+    background-color: mediumspringgreen;
+    color: #fff;
+    border: 1px solid mediumspringgreen;
+    padding: 20px;
+}
+
+
+
+

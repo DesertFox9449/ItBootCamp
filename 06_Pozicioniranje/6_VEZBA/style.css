@@ -1,0 +1,24 @@
+#static {
+    position: static;
+    background-color:blue ;
+    color: #fff;
+
+}
+
+#relative {
+    position: relative;
+    background-color: blueviolet;
+    color: #fff;
+}
+
+#absolute {
+    position: absolute;
+    background-color: brown;
+    color: #fff;
+}
+
+#fixed {
+    position:fixed;
+    background-color: chartreuse;
+    color: #fff;
+}

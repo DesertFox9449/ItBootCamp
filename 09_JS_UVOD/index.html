@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uvod u JS</title>
+</head>
+<body>
+    <script>
+        document.write("<p>Zdravo svete!</p>")
+
+        // document.getElementById("p1").innerHTML = "Izmenjen sadrzaj pragrafa preko JS-a."
+        /* Ne moze se pristupiti HTML <p>
+            elementu jer se jos nije ucitao taj deo HTML-a
+            Mora JS da ide posle tog HTML-a
+            */
+
+    </script>
+    <h1>Uvodni JS</h1>
+    <p id="p1">Uvod u JavaScript</p>
+    <script>
+        // window.alert("nuclear missle incoming");
+        // alert("Zdravo dete");
+        // document.write("Hello Dawg");
+        // console.log("Zdravo svete u konzoli!!!")
+        // document.getElementById("p1").innerHTML = "Izmenjen sadrzaj pragrafa preko JS-a."
+        //
+        console.log(5);
+        console.log(-9.81);
+        console.log("5");
+        console.log(5+3);
+        console.log("5"+"3");
+        console.log(5+"3");
+        console.log("5"+3);
+        console.log('Zdravo!');
+        console.log("It's alright");
+        console.log('It\'s alright');
+        // \' anulira taj navodnik
+        console.log(true);
+         // NEMA NAVODNIKA
+         // logicka vrednost ima plavu boju
+         console.log(false);
+
+         let x; // deklaracija promenljive
+         console.log(x); // undefinded jer joj nije dodeljena vrednost
+         x = 3; // dodela vrednosti
+         console.log(x);
+
+         x = "Stefan" // promenljiva moze da menja vrednost i tip
+         console.log(x);
+
+         let y = false;
+         console.log(y);
+         y = x;         // x = "Stefan" y = "Stefan"
+         console.log(x,y);
+         x = "Jelena"; //x = Jelena, ali u gornjim redovima x = Stefan y=x 
+         // sad je x = Jelena, ali je y = Stefan
+         // linija po linija koda
+         console.log(x, y); // // x = "Jelena" y = "Stefan"
+
+         const z = 0;
+         console.log(z); // z = 0
+
+         y = 6 + z;
+         console.log(y); // y = 6
+
+         //  const p;
+         //  p = 9;  //greska ?
+         let age;
+         console.log(age, age + 3); // undefined, NaN (Not a Number)
+
+         let age2 = null; //null je validna vrednost/ prazna vrednost/ durgacije od 0
+         console.log(age2, age2 + 3); // NULL je 3, prazna vrednost + broj postaje broj 
+         // sabiranjem  moze samo broj da ga zameni
+
+
+
+
+    </script>
+  <!--  <script src="script.js">
+        //JS moze da se koristi iz vise datoteka
+        // resetuje Konzolu na prvu liniju koda
+    </script>
+    -->
+    <script src="vezbanja.js"></script>
+    
+</body>
+</html>
