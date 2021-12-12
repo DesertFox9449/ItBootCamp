@@ -147,6 +147,28 @@ let novacDolari = 200;
 let k3 = novacDolari * kursDolari / kursEvri;
 console.log("Imamo " + k3 + " dolara nakon razmere" );
 
+// Trenutno vreme i datum
+
+let datum = new Date(); // datum postaje objekat koji sadrzi info o trenutnom datumu i vremenu
+
+// https://www.w3schools.com/js/js_date_methods.asp
+
+let godina = datum.getFullYear();
+console.log(godina);
+
+let mesec = datum.getMonth() + 1; // 0 - 11 zbog toga dodajemo 1 da bi bilo od 1 - 12
+console.log(mesec, godina);
+
+let danUMesecu = datum.getDate();
+console.log(danUMesecu, mesec, godina);
+
+let danUNedelji = datum.getDay();
+console.log(danUNedelji); // 0 - 6   gde je nedelja 0, pon 1, uto 2...
+
+
+
+
+
 
 
 

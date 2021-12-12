@@ -36,6 +36,12 @@
         console.log('Zdravo!');
         console.log("It's alright");
         console.log('It\'s alright');
+
+        g = 16 + 4 + "Volvo"; // 20Volvo
+        g = "Volvo" + 4 + 16; // Volvo416
+        console.log(g.length);
+
+
         // \' anulira taj navodnik
         console.log(true);
          // NEMA NAVODNIKA
@@ -66,7 +72,8 @@
          console.log(y); // y = 6
 
          //  const p;
-         //  p = 9;  //greska ?
+         //  p = 9;  //greska 
+         // const se definise i dodeljuje joj se vrednost u istoj liniji
          let age;
          console.log(age, age + 3); // undefined, NaN (Not a Number)
 
@@ -74,16 +81,22 @@
          console.log(age2, age2 + 3); // NULL je 3, prazna vrednost + broj postaje broj 
          // sabiranjem  moze samo broj da ga zameni
 
+         console.log(age2, age2 + 3, age + `ja`);
+         console.log(age2, age2 + 3, age2 + `ja`);
+
+        
+
+
 
 
 
     </script>
-  <!--  <script src="script.js">
+   <script src="script.js">
         //JS moze da se koristi iz vise datoteka
         // resetuje Konzolu na prvu liniju koda
     </script>
-    -->
-    <script src="vezbanja.js"></script>
+   
+    <!-- <script src="vezbanja.js"></script> -->
     
 </body>
 </html>

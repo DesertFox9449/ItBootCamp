@@ -76,7 +76,7 @@ console.log(c, d, x);
 
 //Deljenje po modulu/ OStatak pri deljenju
 console.log(7 % 2); // 7 = 3 * 2 + 1 ====1
-console.log(7 % 2); // 9 = 4 * 2 + 1 ====1
+console.log(9 % 2); // 9 = 4 * 2 + 1 ====1
 console.log(180 % 60); // 180 = 3 * 60 + 0 ====0 
 // Modul sa 60 moguci rezultati 0, 1, 2, ..., 59
 
