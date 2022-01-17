@@ -1,0 +1,41 @@
+* {
+    padding: none;
+    margin: none;
+    box-sizing: border-box;
+}
+form {
+    background-color: #ccc;
+    width: 400px;
+    height: 200px;
+    margin: auto;
+    /* display: flex; */
+    /* flex-direction: column; */
+}
+ul {
+    width: 80%;
+    
+    margin: auto;
+    list-style-type: none;
+    padding-inline-start: 0px;
+    
+    
+}
+li {
+    list-style-type: none;
+    padding: 5px 10px;
+    border: 1px solid black;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    
+
+}
+li:hover {
+    color: #fff;
+    background-color: #666;
+    border: 1px solid #fff;
+}
+h1{
+    text-align: center;
+    color: #fff;
+}
