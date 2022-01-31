@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    /* background-color: aqua; */
+    width: 80%;
+    margin: auto;
+}
+
+button {
+    width: 24%;
+    padding: 5px 5px;
+    color: #fff;
+    background-color:chocolate;
+    border-radius: 5px;
+}
+
+form {
+    width: 80%;
+    margin: auto;
+}
