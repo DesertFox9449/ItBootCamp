@@ -21,17 +21,37 @@ export class ChatUI {
     //   <br>
     //   ${vreme}`;
     //   this.chatRoom.appendChild(li);
+    let newDate = data.created_at.toDate();
     let htmlLI = 
     `
     <li>
         ${data.username} : ${data.message} 
         <br>
-        ${data.created_at}
+        ${this.formatDate(newDate)}
 
     </li>
     `;
     this.chatRoom.innerHTML += htmlLI;
 
+    }
+    
+    formatDate(date) {
+
+        let dan = date.getDate();
+        let mesec = date.getMonth() + 1;
+        let godina = date.getFullYear();
+
+        let sati = date.getHours();
+        let minuti = date.getMinutes();
+
+        // dodavanje nule na da vrednosti imaju dve cifre
+        // dan = String(d).padStart(2,"0");
+        // mesec = String(m).padStart(2,"0");
+        // sati = String(h).padStart(2,"0");
+        // minuti = String(min).padStart(2, "0");
+
+        let novoVreme = `${dan}.${mesec}.${godina}. - ${sati}:${minuti}`;
+        return novoVreme;
     }
 
 

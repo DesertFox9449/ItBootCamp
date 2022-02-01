@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    background-color: rgb(18, 92, 92);
+    color: #fff;
+}
+
+form {
+    background-color: brown;
+    padding: 20px;
+}
+
+label:not(label[for="priority"]) {
+    display: block;
+    font-size: large;
+    color: #fff;
+}
+label[for="priority"]{
+    font-size: large;
+    color: #fff;
+}
+input:not(input[type="checkbox"]),textarea {
+    font-size: large;
+    width: 80%;
+    
+    
+}
