@@ -1,6 +1,6 @@
 import { Chatroom } from "./chat.js";
 import {ChatUI} from "./ui.js";
-
+/*
 let active = document.querySelector(`.active`);
 
 let chat1 = new Chatroom(`JS`, `Stefan`);
@@ -10,7 +10,7 @@ let chat2 = new Chatroom(`general`, `Jelena`);
 let chat3 = new Chatroom(`tests`, `Miljan`);
 
 
-let chatroom1 = new Chatroom(`js`, `Pera`);
+
 console.log(chatroom1);
 
 // test geteri
@@ -22,21 +22,34 @@ console.log(chatroom1.room);
 chatroom1.username = `Dusan`;
 console.log(chatroom1.username);
 
-// room
-chatroom1.room = `general`;
-console.log(chatroom1.room);
+
 
 
 
 chat3.addChat(`Imamo HR trening u sredu!`)
 // .then(() => console.log(`Sve je proslo kako treba.`))
 // .catch((err) => console.log(`Doslo je do greske. ${err}`));
+*/
+// room
+let chatroom1 = new Chatroom(`js`, `Pera`);
+chatroom1.room = `general`;
+console.log(chatroom1.room);
 
 chatroom1.getChats((ocekivani_argument) => {
     console.log(ocekivani_argument);
 })
 
+
+
 let ul = document.querySelector(`#chat ul`);
 let poruka1 = new ChatUI(ul);
 console.log(poruka1);
 console.log(ul);
+
+
+
+
+// Ispis u dokumentu
+chatroom1.getChats((dokument) => {
+    poruka1.templateLI(dokument);
+})

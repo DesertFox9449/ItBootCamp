@@ -1,6 +1,6 @@
 // import db from "./script.js";
 
-let active = document.querySelector(`.active`);
+
 export class Chatroom {
     constructor(r, uName){
         this.room = r;
