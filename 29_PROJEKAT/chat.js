@@ -1,5 +1,6 @@
 // import db from "./script.js";
 
+let active = document.querySelector(`.active`);
 export class Chatroom {
     constructor(r, uName){
         this.room = r;
@@ -57,14 +58,10 @@ export class Chatroom {
 
     // Metod koji prati promene u bazi i vraca poruke
     getChats(callback) {
+        this.chats.where(`room`, `==`, this.room)
+        this.chats.orderBy(`created_at`)
         this.chats.onSnapshot(snapshot => {
             snapshot.docChanges().forEach(change => {
-
-                // Kada se desila promena u bazi
-                // console.log(change.type);
-                // if(change.type == `added`){
-                //     console.log("Promena u bazi");
-                // }
 
                 // Ispisati sve dokumente koji su dodati u bazu
                 if(change.type == `added`) {

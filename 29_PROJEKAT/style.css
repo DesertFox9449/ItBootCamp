@@ -4,21 +4,73 @@
     padding: 0;
 }
 
+body {
+    display: flex;
+    
+    flex-direction: column;
+    background-image: url(./images/cool_web.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+/* Header */
+/* header {
+
+} */
+
+h1 {
+    text-align: center;
+    padding: 15px;
+    color: #fff;
+}
+
+h2 {
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+}
+
 nav {
     /* background-color: aqua; */
     width: 80%;
     margin: auto;
+    display: flex;
+    
 }
 
 button {
     width: 24%;
-    padding: 5px 5px;
+    padding: 10px 5px;
     color: #fff;
     background-color:chocolate;
     border-radius: 5px;
+    font-size: 1.2em;
+}
+button:hover{
+    cursor: pointer;
 }
 
 form {
-    width: 80%;
+    width: 60%;
     margin: auto;
+
+    display: flex;
+    margin-top: 20px;
 }
+.submit{
+    flex-basis: 30%;
+    flex-grow: 1;
+    font-size: 1.2em;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+.text {
+    flex-basis: 70%;
+    flex-grow: 3;
+    font-size: 1.2em;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+

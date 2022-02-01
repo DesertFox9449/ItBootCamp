@@ -26,10 +26,10 @@ console.log(chatroom1.room);
 
 
 
-// chat3.addChat(`Imamo HR trening u sredu!`)
+chat3.addChat(`Imamo HR trening u sredu!`)
 // .then(() => console.log(`Sve je proslo kako treba.`))
 // .catch((err) => console.log(`Doslo je do greske. ${err}`));
 
-// chatroom1.getChats((ocekivani_argument) => {
-//     console.log(ocekivani_argument);
-// })
+chatroom1.getChats((ocekivani_argument) => {
+    console.log(ocekivani_argument);
+})
