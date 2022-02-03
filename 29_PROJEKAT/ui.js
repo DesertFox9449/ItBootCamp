@@ -27,12 +27,20 @@ export class ChatUI {
     }
     
     formatDate(date) {
-
+        // vreme poruke
         let dan = date.getDate();
         let mesec = date.getMonth() + 1;
         let godina = date.getFullYear();
         let sati = date.getHours();
         let minuti = date.getMinutes();
+
+        // sveze vreme
+        let datum = new Date();
+        let d = datum.getDate();
+        let m = datum.getMonth() + 1;
+        let y = datum.getFullYear();
+        console.log(d,m,y);
+        
 
         // dodavanje nule na da vrednosti imaju dve cifre
         dan = String(dan).padStart(2,"0");
@@ -40,7 +48,14 @@ export class ChatUI {
         sati = String(sati).padStart(2,"0");
         minuti = String(minuti).padStart(2, "0");
 
-        let novoVreme = `${dan}.${mesec}.${godina}. - ${sati}:${minuti}`;
+        // poredimo sveze vreme sa vremenom poruke
+        let novoVreme;
+        if(dan == d && m == mesec && y == godina){
+            novoVreme = `${sati}:${minuti}`;
+        }
+        else {
+            novoVreme = `${dan}.${mesec}.${godina}. - ${sati}:${minuti}`;
+        }
         return novoVreme;
     }
 
