@@ -58,9 +58,10 @@ export class Chatroom {
 
     // Metod koji prati promene u bazi i vraca poruke
     getChats(callback) {
-        this.chats.where(`room`, `==`, this.room)
-        this.chats.orderBy(`created_at`)
-        this.chats.onSnapshot(snapshot => {
+        this.chats
+        .where(`room`, `==`, this.room)
+        .orderBy(`created_at`)
+        .onSnapshot(snapshot => {
             snapshot.docChanges().forEach(change => {
 
                 // Ispisati sve dokumente koji su dodati u bazu

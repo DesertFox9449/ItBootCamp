@@ -25,7 +25,9 @@ export class ChatUI {
     let htmlLI = 
     `
     <li>
-        ${data.username} : ${data.message} 
+        ${data.username}
+        <br>
+        ${data.message} 
         <br>
         ${this.formatDate(newDate)}
 
@@ -40,15 +42,14 @@ export class ChatUI {
         let dan = date.getDate();
         let mesec = date.getMonth() + 1;
         let godina = date.getFullYear();
-
         let sati = date.getHours();
         let minuti = date.getMinutes();
 
         // dodavanje nule na da vrednosti imaju dve cifre
-        // dan = String(d).padStart(2,"0");
-        // mesec = String(m).padStart(2,"0");
-        // sati = String(h).padStart(2,"0");
-        // minuti = String(min).padStart(2, "0");
+        dan = String(dan).padStart(2,"0");
+        mesec = String(mesec).padStart(2,"0");
+        sati = String(sati).padStart(2,"0");
+        minuti = String(minuti).padStart(2, "0");
 
         let novoVreme = `${dan}.${mesec}.${godina}. - ${sati}:${minuti}`;
         return novoVreme;

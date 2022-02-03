@@ -1,6 +1,6 @@
 import { Chatroom } from "./chat.js";
 import {ChatUI} from "./ui.js";
-/*
+
 let active = document.querySelector(`.active`);
 
 let chat1 = new Chatroom(`JS`, `Stefan`);
@@ -8,7 +8,7 @@ console.log(chat1);
 
 let chat2 = new Chatroom(`general`, `Jelena`);
 let chat3 = new Chatroom(`tests`, `Miljan`);
-
+/*
 
 
 console.log(chatroom1);
@@ -50,6 +50,35 @@ console.log(ul);
 
 
 // Ispis u dokumentu
-chatroom1.getChats((dokument) => {
+chat2.getChats((dokument) => {
     poruka1.templateLI(dokument);
 })
+
+// ispis sa stranice
+let btn1 = document.getElementById(`submitText`);
+console.log(inputMsg);
+
+btn1.addEventListener(`click`, (event) => {
+    event.preventDefault();
+    // dohvati vrednost
+    let inputMsg = document.getElementById(`inputMsg`);
+    let inputMsgValue = inputMsg.value;
+    console.log(inputMsgValue);
+    chatroom1.addChat(inputMsgValue)
+    .then(() => {
+        inputMsg.value = "";
+    })
+    .catch();
+});
+
+let inputLog = document.getElementById(`inputLog`);
+let logSubmit = document.getElementById(`logSubmit`);
+console.log(inputLog, logSubmit);
+
+logSubmit.addEventListener(`click`, event => {
+    event.preventDefault();
+    let newUsername = inputLog.value;
+    chatroom1.username = newUsername;
+    inputLog.value = ``;
+
+});
