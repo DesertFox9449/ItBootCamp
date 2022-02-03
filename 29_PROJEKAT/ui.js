@@ -1,26 +1,15 @@
 export class ChatUI {
     constructor(cr) {
-        this.chatRoom = cr;
+        this.list = cr;
     }
-    set lista(cr) {
-        this._chatRoom = cr
+    set list(cr) {
+        this._list = cr
     }
-    get lista() {
-        return this._chatRoom;
+    get list() {
+        return this._list;
     }
     
     templateLI(data) {
-    //   let soba = data.room;
-    //   let ime = data.username;
-    //   let vreme = data.created_at.toDate();
-    //   let message = data.message;
-
-    //   let li = document.createElement(`li`);
-
-    //   li.innerHTML = `${ime}: ${message}
-    //   <br>
-    //   ${vreme}`;
-    //   this.chatRoom.appendChild(li);
     let newDate = data.created_at.toDate();
     let htmlLI = 
     `
@@ -33,7 +22,7 @@ export class ChatUI {
 
     </li>
     `;
-    this.chatRoom.innerHTML += htmlLI;
+    this.list.innerHTML += htmlLI;
 
     }
     
@@ -53,6 +42,10 @@ export class ChatUI {
 
         let novoVreme = `${dan}.${mesec}.${godina}. - ${sati}:${minuti}`;
         return novoVreme;
+    }
+
+    delete() {
+        this.list.innerHTML = "";
     }
 
 
