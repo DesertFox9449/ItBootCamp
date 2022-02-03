@@ -44,16 +44,9 @@ export class Chatroom {
             created_at: firebase.firestore.Timestamp.fromDate(date)
         }
 
-        // Da sacuvam dokument u db
-        // let response = await this.chats.add(`Uspesno dodat cet`)
-        // return response; // vracam Promise() i mogu za njega da kazem .then() .catch
-        // // dodavanje dokumenta u bazu podataka
-        // this.chats
 
-        
-        // Da sačuvan dokument u db
         let response = await this.chats.add(docChat);
-        return response; // Vraćam Promise i mogu za njega da kažem .then i .catch 
+        return response; 
     }
 
     // Metod koji prati promene u bazi i vraca poruke

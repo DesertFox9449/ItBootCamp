@@ -39,7 +39,7 @@ export class ChatUI {
         let d = datum.getDate();
         let m = datum.getMonth() + 1;
         let y = datum.getFullYear();
-        console.log(d,m,y);
+        
         
 
         // dodavanje nule na da vrednosti imaju dve cifre
