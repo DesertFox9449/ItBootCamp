@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vezbe</title>
+</head>
+<body>
+    
+    <div id="order">
+        <form action="">
+            <label for="capacity">Kapacitet kamiona:</label>
+            <input type="number" name="capacity" id="capacity">
+            <input type="submit" value="Proveri">
+        </form>
+    </div>
+
+    <div id="stanje">
+        <form action="">
+            <input type="text" name="naziv" id="naziv" placeholder="ime proizvoda" value="">
+            <input type="number" name="cena1" id="cena1" placeholder="cena1" value="1000">
+            <input type="number" name="cena2" id="cena2" placeholder="cena2" value="10000">
+            <input type="submit" value="Submit" id="predaj">
+        </form>
+    </div>
+
+    <ul id="noviIspis">
+
+    </ul>
+
+    <div id="ispis">
+        <table style="border: 1px solid black;">
+            <tr>
+                <th>Naziv artikla</th>
+                <th>Cena</th>
+            </tr>
+            
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

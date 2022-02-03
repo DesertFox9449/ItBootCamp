@@ -12,6 +12,20 @@ let logSubmit = document.getElementById(`logSubmit`);
 let chatroom = new Chatroom(`js`, `Pera`);
 let poruka1 = new ChatUI(ul);
 
+// Postavljanje vrednosti u lokal Storage
+localStorage.setItem("nazivPromenljive",5);
+localStorage.setItem("nazivPromenljive",6);
+localStorage.setItem("nazivPromenljive","Test string");
+localStorage.setItem("x",7);
+localStorage.setItem("y",10);
+// uzimanje vrednosti promenljive iz Local Storage
+let z = localStorage.x + localStorage.y;
+console.log(z);
+
+
+
+
+
 // ispis dokumenata u konzoli
 chatroom.getChats((ocekivani_argument) => {
     console.log(ocekivani_argument);
@@ -41,7 +55,14 @@ btn1.addEventListener(`click`, (event) => {
 logSubmit.addEventListener(`click`, event => {
     event.preventDefault();
     let newUsername = inputLog.value;
-    chatroom.username = newUsername;
-    inputLog.value = ``;
+    
+    if(newUsername.length >= 2 && newUsername.length <= 10){
+        chatroom.username = newUsername;
+        let ispis = document.createElement(`p`);
+    }
+    else{
 
+    }
+    inputLog.value = ``;
+    
 });

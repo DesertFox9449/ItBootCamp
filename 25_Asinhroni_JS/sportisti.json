@@ -1,0 +1,24 @@
+[
+    {
+        "imePrezime": "Kobi Brajant",
+        "visina": 209,
+        "timovi": ["Lejkersi"]
+    },
+
+    {
+        "imePrezime": "Rasko Katic",
+        "visina": 211,
+        "timovi": ["Mega", "Radnicki"]
+    },
+
+    {
+        "imePrezime": "Bogdan Bogdanovic",
+        "visina": 205,
+        "timovi": ["Partizan", "Fenerbahce", "Sakramento"]
+    }
+    
+]
+
+
+
+
