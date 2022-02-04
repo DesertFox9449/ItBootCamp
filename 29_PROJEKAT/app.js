@@ -9,6 +9,7 @@ let logSubmit = document.getElementById(`logSubmit`);
 let navigacija = document.querySelector(`nav`);
 let buttons = document.querySelectorAll(`button`);
 let general = document.getElementById(`general`);
+let inputMsg = document.getElementById(`inputMsg`);
 
 
 
@@ -16,29 +17,7 @@ let general = document.getElementById(`general`);
 let chatroom = new Chatroom(`js`, `Pera`);
 let poruka1 = new ChatUI(ul);
 
-function pocetnaSoba() {
-    if(localStorage.roomID == null){
-        chatroom.room = `general`;
-        general.style.color = `yellow`;
-    }
-    else{
-        chatroom.room = localStorage.roomID;
-        buttons.forEach(b => {
-            if(b.id == localStorage.roomID) {
-                b.style.color = `yellow`;
-            }
-        }); 
-    }
-}
-pocetnaSoba();
 
-function podesavanjeSobe(sobaTarget, sobaID) {
-    buttons.forEach(b => {
-        b.style.color = `#fff`; 
-    });
-    localStorage.setItem(`roomID`, sobaID);
-    sobaTarget.style.color = `yellow`;
-}
 
 // Ispis u dokumentu
 chatroom.getChats((dokument) => {
@@ -49,7 +28,7 @@ chatroom.getChats((dokument) => {
 btn1.addEventListener(`click`, (event) => {
     event.preventDefault();
     // dohvati vrednost
-    let inputMsg = document.getElementById(`inputMsg`);
+    
     let inputMsgValue = inputMsg.value;
     console.log(inputMsgValue);
     console.log(inputLog.value);
@@ -76,6 +55,11 @@ logSubmit.addEventListener(`click`, event => {
     if(newUsername.length >= 2 && newUsername.length <= 10){
         localStorage.setItem(`ime`, newUsername);
         chatroom.username = newUsername;
+        poruka1.delete();
+        chatroom.room = localStorage.roomID;
+        chatroom.getChats((dokument) => {
+            poruka1.templateLI(dokument);
+        })
         
 
     }
@@ -110,3 +94,28 @@ navigacija.addEventListener(`click`, event => {
 
 
 
+function pocetnaSoba() {
+    if(localStorage.roomID == null){
+        chatroom.room = `general`;
+        general.style.color = `yellow`;
+    }
+    else{
+        chatroom.room = localStorage.roomID;
+        buttons.forEach(b => {
+            if(b.id == localStorage.roomID) {
+                b.style.color = `yellow`;
+            }
+        }); 
+    }
+}
+pocetnaSoba();
+
+function podesavanjeSobe(sobaTarget, sobaID) {
+    buttons.forEach(b => {
+        b.style.color = `#fff`; 
+    });
+    localStorage.setItem(`roomID`, sobaID);
+    sobaTarget.style.color = `yellow`;
+}
+
+export default chatroom;

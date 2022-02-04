@@ -1,3 +1,7 @@
+import chatroom from "./app.js";
+import { Chatroom } from "./chat.js";
+
+
 export class ChatUI {
     constructor(cr) {
         this.list = cr;
@@ -11,9 +15,14 @@ export class ChatUI {
     
     templateLI(data) {
     let newDate = data.created_at.toDate();
-    let htmlLI = 
+    let htmlLI;
+    if(localStorage.ime == null){
+        localStorage.ime = `anonymous`;
+    }
+    if(data.username == localStorage.ime) {
+        htmlLI = 
     `
-    <li>
+    <li class="floatRight">
         ${data.username}
         <br>
         ${data.message} 
@@ -22,6 +31,21 @@ export class ChatUI {
 
     </li>
     `;
+    }
+    else{
+        htmlLI = 
+    `
+    <li class="floatLeft">
+        ${data.username}
+        <br>
+        ${data.message} 
+        <br>
+        ${this.formatDate(newDate)}
+
+    </li>
+    `;
+    }
+    
     this.list.innerHTML += htmlLI;
 
     }
@@ -62,6 +86,6 @@ export class ChatUI {
     delete() {
         this.list.innerHTML = "";
     }
-
+    
 
 }
