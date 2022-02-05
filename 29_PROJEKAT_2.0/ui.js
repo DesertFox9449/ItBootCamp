@@ -1,7 +1,6 @@
-import chatroom from "./app.js";
+import {chatroom} from "./app.js";
 import { Chatroom } from "./chat.js";
-
-
+// klasa
 export class ChatUI {
     constructor(cr) {
         this.list = cr;
@@ -12,9 +11,11 @@ export class ChatUI {
     get list() {
         return this._list;
     }
+    // ispis poruka
+    templateLI(doc) {
     
-
-    templateLI(data) {
+    let id = doc.id;
+    let data = doc.data();
     let newDate = data.created_at.toDate();
     let htmlLI;
     if(localStorage.ime == null){
@@ -23,34 +24,34 @@ export class ChatUI {
     if(data.username == localStorage.ime) {
         htmlLI = 
     `
-    <li class="floatRight">
+    <li class="floatRight" id="${id}">
         ${data.username}
         <br>
         ${data.message} 
         <br>
         ${this.formatDate(newDate)}
-
+        <br>
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/003/241/364/small/trash-bin-icon-line-vector.jpg">
     </li>
     `;
     }
     else{
         htmlLI = 
     `
-    <li class="floatLeft">
+    <li class="floatLeft" id="${id}">
         ${data.username}
         <br>
         ${data.message} 
         <br>
         ${this.formatDate(newDate)}
-
+        <br>
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/003/241/364/small/trash-bin-icon-line-vector.jpg">
     </li>
     `;
     }
-    
     this.list.innerHTML += htmlLI;
-
     }
-    
+    // formatiranje datuma
     formatDate(date) {
         // vreme poruke
         let dan = date.getDate();
@@ -58,21 +59,16 @@ export class ChatUI {
         let godina = date.getFullYear();
         let sati = date.getHours();
         let minuti = date.getMinutes();
-
         // sveze vreme
         let datum = new Date();
         let d = datum.getDate();
         let m = datum.getMonth() + 1;
         let y = datum.getFullYear();
-        
-        
-
-        // dodavanje nule na da vrednosti imaju dve cifre
+        // menjanje izgleda vremena
         dan = String(dan).padStart(2,"0");
         mesec = String(mesec).padStart(2,"0");
         sati = String(sati).padStart(2,"0");
         minuti = String(minuti).padStart(2, "0");
-
         // poredimo sveze vreme sa vremenom poruke
         let novoVreme;
         if(dan == d && m == mesec && y == godina){
@@ -83,10 +79,8 @@ export class ChatUI {
         }
         return novoVreme;
     }
-
+    // prazni ul
     delete() {
         this.list.innerHTML = "";
     }
-    
-
 }

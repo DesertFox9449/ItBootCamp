@@ -6,6 +6,8 @@ export class Chatroom {
         this.room = r;
         this.username = uName;
         this.chats = db.collection(`chats`);
+        this.unsub = false; // pocetna vrednost
+        // signal da je stranica prvi put ucitana
     }
     // za room
     set room(r) {
@@ -29,6 +31,16 @@ export class Chatroom {
         return this._username;
     }
     
+    // Update room
+    updateRoom(ur){
+        this.room = ur;
+        if(this.unsub != false){ // unsub vise nije false, nego je u getChats postalo funkcija
+            this.unsub(); // unsub je funkcija
+
+        }
+        
+        
+    }
 
     ////////////////////// Jelena
     // dodavanje nove poruke
@@ -51,7 +63,7 @@ export class Chatroom {
 
     // Metod koji prati promene u bazi i vraca poruke
     getChats(callback) {
-        this.chats
+        this.unsub = this.chats
         .where(`room`, `==`, this.room)
         .orderBy(`created_at`)
         .onSnapshot(snapshot => {

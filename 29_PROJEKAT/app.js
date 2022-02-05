@@ -14,8 +14,12 @@ let inputMsg = document.getElementById(`inputMsg`);
 
 
 // Objekti/Klase
-let chatroom = new Chatroom(`js`, `Pera`);
+let chatroom = new Chatroom(`general`, `Pera`);
 let poruka1 = new ChatUI(ul);
+let r = localStorage.roomID;
+if(r){
+    chatroom.room = r;
+}
 
 
 
@@ -27,11 +31,10 @@ chatroom.getChats((dokument) => {
 // Submit dugme za poruku
 btn1.addEventListener(`click`, (event) => {
     event.preventDefault();
+   
     // dohvati vrednost
-    
     let inputMsgValue = inputMsg.value;
-    console.log(inputMsgValue);
-    console.log(inputLog.value);
+    inputMsg.value = "";
     if(localStorage.ime == null){
         chatroom.username = `anonymous`;
     }
@@ -82,7 +85,7 @@ navigacija.addEventListener(`click`, event => {
         // obrisi chat
         poruka1.delete();
         // preimenuj sobu
-        chatroom.room = sobaID;
+        chatroom.updateRoom(sobaID);
         // ponovno upisivanje poruka
         chatroom.getChats((dokument) => {
             poruka1.templateLI(dokument);
@@ -96,17 +99,19 @@ navigacija.addEventListener(`click`, event => {
 
 function pocetnaSoba() {
     if(localStorage.roomID == null){
-        chatroom.room = `general`;
+        localStorage.setItem(`roomID`, `general`);
         general.style.color = `yellow`;
     }
     else{
-        chatroom.room = localStorage.roomID;
+        
         buttons.forEach(b => {
             if(b.id == localStorage.roomID) {
                 b.style.color = `yellow`;
+                chatroom.room = localStorage.roomID;
             }
         }); 
     }
+    
 }
 pocetnaSoba();
 

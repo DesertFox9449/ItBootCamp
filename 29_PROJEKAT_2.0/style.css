@@ -110,3 +110,25 @@ ul li {
     margin-right: 5px;
     background-color:chartreuse;
 }
+img {
+    width: 30px;
+    height: 30px;
+    display: block;
+    float: right;
+}
+
+#chat {
+    border: 5px solid #fff;
+}
+
+footer {
+    height: 50px;
+    width: 100%;
+    background-color: chocolate;
+    display: none;
+}
+p {
+    text-align: center;
+    color: #fff;
+    line-height: 50px;
+}

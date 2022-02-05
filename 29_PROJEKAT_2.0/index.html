@@ -19,23 +19,38 @@
         <button href="#" id="homework">#homework</button>
         <button href="#" id="tests">#tests</button>
     </nav>
+    
 
     <section id="chat">
         <ul>
 
         </ul>
     </section>
-    
-
-    
+    <!-- // BOJA -->
+    <form action="" method="get" id="colorPicker">
+        <input type="color" name="color" id="color" value="#ffffff">
+        <input type="submit" value="Update color" id="submitBoja"> 
+    </form>
+    <!-- // VREME -->
+    <form action="" method="get" id="time">
+        <input type="datetime-local" name="start_date" id="start_date">
+        <input type="datetime-local" name="end_date" id="end_date">
+        <input type="submit" value="Set dates" id="set_date">
+    </form>
+    <!-- // PORUKA -->
     <form id="msg">
-        <input type="text" name="inputMsg" id="inputMsg" placeholder="Your message..." class="text">
+        <textarea name="inputMsg" id="inputMsg" placeholder="Your message..." cols="30" rows="10"></textarea>
         <input type="submit" value="Send" class="submit" id="submitText">
     </form>
+    <!-- // USERNAME -->
     <form id="log">
         <input type="text" name="inputLog" id="inputLog" placeholder="Update username" class="text">
         <input type="submit" value="Update" class="submit" id="logSubmit">
     </form>
+
+    <footer>
+        <p>Uspešno ste promenili korisničko ime u <span></span> </p>
+    </footer>
 
 
     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
