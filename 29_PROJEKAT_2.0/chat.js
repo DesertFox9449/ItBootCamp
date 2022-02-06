@@ -53,7 +53,6 @@ export class Chatroom {
         .orderBy(`created_at`)
         .onSnapshot(snapshot => {
             snapshot.docChanges().forEach(change => {
-                let doc = change.doc;
                 if(change.type == `added`) {
                     callback(change.doc);
                 }   
@@ -83,11 +82,8 @@ export class Chatroom {
         .orderBy(`created_at`)
         .onSnapshot(snapshot => {
             snapshot.docChanges().forEach(change => {
-                
-                // Ispisati sve dokumente koji su dodati u bazu
-                if(change.type == `added`) {
-                    callback(change.doc);
-                }  
+                  callback(change.doc);
+                  
             });
         })
     }

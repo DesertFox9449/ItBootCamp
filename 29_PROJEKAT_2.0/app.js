@@ -13,14 +13,14 @@ let inputMsg = document.getElementById(`inputMsg`);
 let submitBoja = document.getElementById(`submitBoja`);
 let color = document.getElementById(`color`);
 let chat = document.querySelector(`#chat`);
-let footer = document.querySelector(`footer`);
+let footer = document.querySelector(`footer p`);
 let poruka = document.querySelector(`footer p span`);
 let startDate = document.getElementById(`start_date`);
 let endDate = document.getElementById(`end_date`)
 let setDate = document.getElementById(`set_date`);
 
 // boja
-chat.style.border = `10px solid ${localStorage.color}`;
+ul.style.border = `10px solid ${localStorage.color}`;
 
 // Objekti/Klase
 let chatroom = new Chatroom(`general`, `Pera`);
@@ -62,6 +62,7 @@ btn1.addEventListener(`click`, (event) => {
 logSubmit.addEventListener(`click`, event => {
     event.preventDefault();
     let newUsername = inputLog.value;
+    inputLog.value = ``;
     
     if(newUsername.length >= 2 && newUsername.length <= 10){
         localStorage.setItem(`ime`, newUsername);
@@ -71,12 +72,10 @@ logSubmit.addEventListener(`click`, event => {
         chatroom.getChats((dokument) => {
             poruka1.templateLI(dokument);
         })
-        poruka.innerHTML = newUsername;
-        poruka.style.fontSize = `20px`;
-        poruka.style.fontWeight = `bold`;
-        footer.style.display = `block`;
+        poruka.innerHTML = `${newUsername} !`;
+        footer.style.visibility = `visible`;
         setTimeout(() => {
-            footer.style.display = `none`;
+            footer.style.visibility = `hidden`;
         },3000);
     }
     else{
@@ -108,13 +107,13 @@ navigacija.addEventListener(`click`, event => {
 function pocetnaSoba() {
     if(localStorage.roomID == null){
         localStorage.setItem(`roomID`, `general`);
-        general.style.color = `yellow`;
+        b.style.backgroundColor = `#444`;
     }
     else{
         
         buttons.forEach(b => {
             if(b.id == localStorage.roomID) {
-                b.style.color = `yellow`;
+                b.style.backgroundColor = `#444`;
                 chatroom.room = localStorage.roomID;
             }
         }); 
@@ -124,19 +123,17 @@ pocetnaSoba();
 
 function podesavanjeSobe(sobaTarget, sobaID) {
     buttons.forEach(b => {
-        b.style.color = `#fff`; 
+        b.style.backgroundColor = `#999`; 
     });
     localStorage.setItem(`roomID`, sobaID);
-    sobaTarget.style.color = `yellow`;
+    sobaTarget.style.backgroundColor = `#444`;
 }
 //////////////////////////////////////
 // event listener za ul
 ul.addEventListener(`click`, event => {
     console.log(event.target);
-    scrollBy(0, 1000);
     if(event.target.tagName == "IMG"){
-        console.log(event.target.parentNode);
-        
+        console.log(event.target.parentNode);   
         if(event.target.parentNode.classList == "floatRight") {
             let potvrda = confirm(`Da li ste sigurni da zelite da obrisete poruku?`)
             if(potvrda){
@@ -157,7 +154,7 @@ submitBoja.addEventListener(`click`, event => {
     let colorValue = color.value;
     setTimeout(() => {
         localStorage.setItem(`color`, `${colorValue}`);
-        chat.style.border = `10px solid ${localStorage.color}`;
+        ul.style.border = `10px solid ${localStorage.color}`;
     }, 500);
 });
 // 
@@ -185,11 +182,6 @@ setDate.addEventListener(`click`,event => {
     else {
         alert(`Popuniti pravilno pollja za datume.`)
     }
-
 });
 
-//
-console.log(ul.lastChild);
-scrollBy(0, 1000);
-//
 export {chatroom, startValueFB, endValueFB};

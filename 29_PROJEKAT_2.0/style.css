@@ -6,7 +6,6 @@
 
 body {
     display: flex;
-    
     flex-direction: column;
     background-image: url(./images/cool_web.png);
     background-repeat: no-repeat;
@@ -35,16 +34,19 @@ nav {
     width: 80%;
     margin: auto;
     display: flex;
+    position:sticky;
+    top: 0px;
+
     
 }
 
 button {
-    width: 24%;
-    padding: 10px 5px;
+    width: 300px;
+    padding: 15px 0px;
     color: #fff;
-    background-color:chocolate;
-    border-radius: 5px;
-    font-size: 1.2em;
+    background-color:darkblue;
+    border-radius: 10px;
+    font-size: 1em;
 }
 button:hover{
     cursor: pointer;
@@ -53,14 +55,13 @@ button:hover{
 form {
     width: 60%;
     margin: auto;
-
     display: flex;
     margin-top: 20px;
 }
 .submit{
     flex-basis: 30%;
     flex-grow: 1;
-    font-size: 1.2em;
+    font-size: 1em;
     border-radius: 5px;
     padding: 5px;
     margin: 5px;
@@ -81,6 +82,35 @@ form {
 .text::placeholder{
     color: #bbb;
 }
+/* B O J A */
+#color {
+    width: 66%;
+    height: 36px;
+}
+#submitBoja {
+    width: 33%;
+    padding: 5px;
+    font-size: 1.2em;
+}
+/* D A T U M */
+input[type="datetime-local"] {
+    width: 34%;
+    padding: 5px;
+    font-size: 1.2em;
+}
+#set_date {
+    width: 31%;
+    font-size: 1.2em;
+}
+/* P O R U K A */
+#inputMsg {
+    width: 66%;
+    height: 25px;
+}
+#submitText {
+    width: 33%;
+    height: 36px;
+}
 
 section {
     width: 60%;
@@ -91,7 +121,6 @@ section {
 }
 
 ul li {
-    
     margin-top: 10px;
     margin-left: 8px;
     border: 1px solid gray;
@@ -115,20 +144,25 @@ img {
     height: 30px;
     display: block;
     float: right;
+    
 }
-
 #chat {
     border: 5px solid #fff;
+    border-radius: 15px;
 }
 
 footer {
     height: 50px;
     width: 100%;
-    background-color: chocolate;
+    background-color: rgb(210, 105, 30);
     display: none;
 }
 p {
     text-align: center;
     color: #fff;
     line-height: 50px;
+}
+
+ul {
+    overflow-y: auto;
 }

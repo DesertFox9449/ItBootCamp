@@ -25,13 +25,12 @@ export class ChatUI {
         htmlLI = 
     `
     <li class="floatRight" id="${id}">
-        ${data.username}
+        <span class="user">${data.username}</span>
         <br>
-        ${data.message} 
+        <span class="message">${data.message}</span> 
         <br>
-        ${this.formatDate(newDate)}
-        <br>
-        <img src="https://static.vecteezy.com/system/resources/thumbnails/003/241/364/small/trash-bin-icon-line-vector.jpg">
+        <span class="date">${this.formatDate(newDate)}</span>
+        <img src="./images/MyTrash.svg">
     </li>
     `;
     }
@@ -39,13 +38,12 @@ export class ChatUI {
         htmlLI = 
     `
     <li class="floatLeft" id="${id}">
-        ${data.username}
+        <span class="user">${data.username}</span>
         <br>
-        ${data.message} 
+        <span class="message">${data.message}</span> 
         <br>
-        ${this.formatDate(newDate)}
-        <br>
-        <img src="https://static.vecteezy.com/system/resources/thumbnails/003/241/364/small/trash-bin-icon-line-vector.jpg">
+        <span class="date">${this.formatDate(newDate)}</span>
+        <img src="./images/MyTrash.svg">
     </li>
     `;
     }
